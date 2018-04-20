@@ -59,9 +59,9 @@
   "sourceMap": "26:338:0:-;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "26:338:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;279:83;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;279:83:0;;;;;;;;;;;;;;;;74:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;106:148;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;279:83;323:11;;:::i;:::-;349:8;342:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;279:83;:::o;74:27::-;;;;;;;;;;;;;;;;;;;;;;;;;:::o;106:148::-;149:4;178:1;169:5;:10;;:25;;;;;192:2;183:5;:11;;169:25;161:34;;;;;;;;220:10;202:8;211:5;202:15;;;;;;;;;;;:28;;;;;;;;;;;;;;;;;;244:5;237:12;;106:148;;;:::o;26:338::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
   "source": "pragma solidity ^0.4.17;\n\ncontract Adoption {\n  //array of 16 addresses\n  address[16] public adopters;\n\n  function adopt(uint petId) public returns (uint) {\n    require(petId >= 0 && petId <= 15);\n\n    adopters[petId] = msg.sender;\n\n    return petId;\n  }\n\n  //Q: what is view?\n  function getAdopters() public view returns (address[16]) {\n    return adopters;\n  }\n}\n",
-  "sourcePath": "/Users/pbrudny/jsy/pet-shop-tutorial/contracts/Adoption.sol",
+  "sourcePath": "/Users/pbrudny/jsy/pet-shop/contracts/Adoption.sol",
   "ast": {
-    "absolutePath": "/Users/pbrudny/jsy/pet-shop-tutorial/contracts/Adoption.sol",
+    "absolutePath": "/Users/pbrudny/jsy/pet-shop/contracts/Adoption.sol",
     "exportedSymbols": {
       "Adoption": [
         43
@@ -620,7 +620,7 @@
     "src": "0:365:0"
   },
   "legacyAST": {
-    "absolutePath": "/Users/pbrudny/jsy/pet-shop-tutorial/contracts/Adoption.sol",
+    "absolutePath": "/Users/pbrudny/jsy/pet-shop/contracts/Adoption.sol",
     "exportedSymbols": {
       "Adoption": [
         43
